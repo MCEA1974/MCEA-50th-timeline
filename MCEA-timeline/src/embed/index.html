@@ -38,7 +38,7 @@
     <!-- BEGIN Timeline Embed -->
     <div id="timeline-embed"></div>
     
-    <!-- Initialize TimelineJS with custom JSON data -->
+    <!-- Initialize TimelineJS with Google Spreadsheet data -->
     <script type="text/javascript">
         function ready(fn) {
             if (document.readyState !== 'loading') {
@@ -123,8 +123,8 @@
             createEmbedDiv('timeline-embed', options.width, options.height);
             options.ga_measurement_id = 'G-LVEFKMG087';
 
-            // Use custom JSON file located in the same directory as index.html (embed directory)
-            options.source = 'MCEAtl.json'; // Path is relative to index.html
+            // Switch back to Google Spreadsheet ID
+            options.source = 'https://docs.google.com/spreadsheets/d/1m1evJR6PFydzjuOyLaQre7Ii1cx29BANYq99anUVvDc/edit?gid=0#gid=0'; // Replace with your Spreadsheet ID
             options.language = userLang; // Set timeline language to user's browser language
 
             options.soundcite = true;
