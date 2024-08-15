@@ -49,11 +49,12 @@
         }
 
         function setPageLanguage() {
-            // Use the browser's default language, fallback to English if not available
-            const userLang = navigator.language || navigator.userLanguage || 'en';
-            document.getElementsByTagName('html')[0].setAttribute('lang', userLang);
-            return userLang;
-        }
+    // Use the browser's default language, fallback to 'en' if not available
+    const userLang = navigator.language || navigator.userLanguage || 'en';
+    const shortLang = userLang.split('-')[0]; // 'en-US' becomes 'en'
+    document.getElementsByTagName('html')[0].setAttribute('lang', shortLang);
+    return shortLang;
+}
 
         function computeEmbedPath() {
             const trimPoint = window.location.href.indexOf('embed/index.html');
