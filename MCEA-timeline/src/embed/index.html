@@ -32,53 +32,11 @@
             height: 100%;
         }
 
-        /* Custom colors for specific groups */
-        .tl-timegroup {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            align-items: center;
-            background-color: #ffffff; /* Default to white */
-        }
-
-        .tl-timegroup.group1 {
-            background-color: #FFB3BA; /* Light pastel pink */
-        }
-
-        .tl-timegroup.group2 {
-            background-color: #FFDFBA; /* Light pastel orange */
-        }
-
-        .tl-timegroup.group3 {
-            background-color: #FFFFBA; /* Light pastel yellow */
-        }
-
-        .tl-timegroup.group4 {
-            background-color: #BAFFC9; /* Light pastel green */
-        }
-
-        .tl-timegroup.group5 {
-            background-color: #BAE1FF; /* Light pastel blue */
-        }
-
-        .tl-timegroup.group6 {
-            background-color: #E1BAFF; /* Light pastel purple */
-        }
-
-        .tl-timegroup.group7 {
-            background-color: #FFCBAE; /* Light pastel peach */
-        }
-
-        /* Remove or modify the alternate style */
-        .tl-timegroup-alternate {
-            background-color: transparent; /* Set to transparent or remove */
-        }
-
+        /* Make group headings bold */
         .tl-timegroup-message {
-            color: #333333; /* Text color for group message */
-            text-shadow: none; /* Remove text shadow */
+            font-weight: bold;
+            color: #333333 !important; /* Text color for group message */
+            text-shadow: none !important; /* Remove text shadow */
             margin-left: 80px;
         }
     </style>
@@ -173,21 +131,6 @@
             const options = optionsFromUrlParams();
             createEmbedDiv('timeline-embed', options.width, options.height);
             options.ga_measurement_id = 'G-LVEFKMG087';
-
-            // Apply custom group colors
-            const groups = document.querySelectorAll('.tl-timegroup');
-            groups.forEach((group, index) => {
-                const groupClass = `group${(index % 7) + 1}`;
-                group.classList.add(groupClass);
-            });
-
-            // Optionally remove the alternate class or modify it as needed
-            groups.forEach((group) => {
-                if (group.classList.contains('tl-timegroup-alternate')) {
-                    group.classList.remove('tl-timegroup-alternate'); // Remove alternate class
-                    // or modify as needed
-                }
-            });
 
             // Switch back to Google Spreadsheet ID
             options.source = 'https://docs.google.com/spreadsheets/d/1m1evJR6PFydzjuOyLaQre7Ii1cx29BANYq99anUVvDc/edit?gid=0#gid=0'; // Replace with your Spreadsheet ID
