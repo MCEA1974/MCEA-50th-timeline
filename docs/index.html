@@ -17,8 +17,8 @@
     <link rel="mask-icon" href="https://cdn.knightlab.com/libs/orangeline/latest/assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
 
     <!-- Link to local TimelineJS JavaScript and CSS files -->
-    <script id='timeline-script-tag' type="text/javascript" src="../js/timeline.js"></script>
-    <link rel="stylesheet" href="../css/timeline.css">
+    <script id='timeline-script-tag' type="text/javascript" src="./js/timeline.js"></script>
+    <link rel="stylesheet" href="./css/timeline.css">
 
     <!-- Custom Style -->
     <style>
@@ -65,7 +65,7 @@
         }
 
         function computeEmbedPath() {
-            const trimPoint = window.location.href.indexOf('embed/index.html');
+            const trimPoint = window.location.href.indexOf('index.html');
             if (trimPoint > 0) {
                 return window.location.href.substring(0, trimPoint);
             }
